@@ -2,7 +2,7 @@ import time
 
 import RPi.GPIO as GPIO
 
-from stepper_constants import *
+from hardware_constants import *
 
 from pyfingerprint.pyfingerprint import PyFingerprint
 
