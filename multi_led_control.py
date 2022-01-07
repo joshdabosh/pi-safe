@@ -1,5 +1,5 @@
 import time
-
+import itertools
 import RPi.GPIO as GPIO
 
 from hardware_constants import *
@@ -16,8 +16,11 @@ def setColor(r, g, b):
     GPIO.output(LED_GREEN, g)
     GPIO.output(LED_BLUE, b)
 
-setColor(1, 0, 0)
+arr = [4, 2, 1, 6, 3, 7]
 
-time.sleep(3)
+for i in arr:
+    setColor(i & 4, i & 2, i & 1)
+    time.sleep(1)
+
 
 GPIO.cleanup()
