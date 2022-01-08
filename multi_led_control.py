@@ -1,5 +1,4 @@
 import time
-import itertools
 import RPi.GPIO as GPIO
 
 from hardware_constants import *
