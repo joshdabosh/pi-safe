@@ -1,3 +1,5 @@
+LATCH_CYCLE_COUNT = 275
+
 MOTORDRIVER_INPUT1 = 4    # pin 7, blue
 MOTORDRIVER_INPUT3 = 17   # pin 11, yellow
 MOTORDRIVER_INPUT2 = 23   # pin 16, orange

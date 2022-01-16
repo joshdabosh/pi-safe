@@ -88,9 +88,9 @@ while True:
     # open, wait, close lock
     setLEDColor(0, 1, 0)            # green color
 
-    motorClockwise(200)
+    motorClockwise(LATCH_CYCLE_COUNT)
     time.sleep(3)
-    motorCounterclockwise(200)
+    motorCounterclockwise(LATCH_CYCLE_COUNT)
 
     setMotorStep(0, 0, 0, 0)        # don't burn out the motor waiting for fingerprints
 
