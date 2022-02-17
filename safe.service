@@ -1,0 +1,17 @@
+[Unit]
+Description=safe
+After=network.target
+
+[Service]
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/Desktop/pi-safe
+ExecStart=/usr/bin/python3 safe.py
+Restart=always
+RestartSec=3000ms
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
+
+
