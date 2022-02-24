@@ -1,4 +1,4 @@
-from flask import flask
+from flask import Flask
 
 import time
 
@@ -39,9 +39,9 @@ app = Flask(__name__)
 
 @app.route("/asdffdsa123")
 def open():
+    global lock
     if lock:
         return "-1"
-
     lock = 1
     
     GPIO.setmode(GPIO.BCM)
@@ -59,13 +59,13 @@ def open():
     motorClockwise(LATCH_CYCLE_COUNT)
     time.sleep(3)
 
-    motorCounterclockwise(LATCH_CYCLE_COUNT-20)
+    motorCounterclockwise(LATCH_CYCLE_COUNT)
 
     setMotorStep(0, 0, 0, 0)        # don't burn out the motor waiting for fingerprints
 
     GPIO.cleanup()
-
+    lock=0
 
     return "1"
 
-app.run()
+app.run(host="0.0.0.0")

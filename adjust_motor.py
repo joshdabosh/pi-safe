@@ -45,9 +45,9 @@ while True:
     except:
         GPIO.cleanup()
     if x.strip() == "i":
-        motorCounterclockwise(15)
+        motorCounterclockwise(10)
     elif x.strip() == "d":
-        motorClockwise(15)
+        motorClockwise(10)
     else:
         continue
 

@@ -1,0 +1,16 @@
+[Unit]
+Description=tailscale
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/home/pi/Desktop/pi-safe
+ExecStart=/usr/bin/tailscale up
+Restart=on-failure
+RestartSec=5000ms
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
+

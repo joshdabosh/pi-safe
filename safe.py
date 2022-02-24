@@ -90,7 +90,7 @@ while True:
 
     motorClockwise(LATCH_CYCLE_COUNT)
     time.sleep(3)
-    motorCounterclockwise(LATCH_CYCLE_COUNT-20)
+    motorCounterclockwise(LATCH_CYCLE_COUNT)
 
     setMotorStep(0, 0, 0, 0)        # don't burn out the motor waiting for fingerprints
 
